@@ -1,1 +1,19 @@
-# trimming 10 bp in 
+# trim only 10 bp in 5' end/front (opt. 1)
+fastp SRR1552444.fastq \
+-o SRR1552444_trimmed.fastq\
+--trim_front1 10 \
+SRR1552444_trimmed.html
+
+# trim only 10 bp in 5' end (opt. 1)
+
+fastp SRR1552444.fastq \
+-o SRR1552444_trimmed.fastq\
+--trim_tail1 10 \
+SRR1552444_trimmed.html
+
+
+fastp SRR1552444.fastq \
+-o SRR1552444_trimmed.fastq\
+--trim_front1 10 \
+--trim_tail1 10 \
+SRR1552444_trimmed.html
