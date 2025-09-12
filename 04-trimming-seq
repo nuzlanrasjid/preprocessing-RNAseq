@@ -1,19 +1,18 @@
 # trim only 10 bp in 5' end/front (opt. 1)
 fastp SRR1552444.fastq \
 -o SRR1552444_trimmed.fastq\
---trim_front1 10 \
+--trim_front1 10 \ # 10 = the number of nucleotide base pair to trim
 SRR1552444_trimmed.html
 
-# trim only 10 bp in 5' end (opt. 1)
-
+# trim only 10 bp in 3' end/tail (opt. 2)
 fastp SRR1552444.fastq \
 -o SRR1552444_trimmed.fastq\
---trim_tail1 10 \
+--trim_tail1 10 \ # 10 = the number of nucleotide base pair to trim
 SRR1552444_trimmed.html
 
-
+# trim only 10 bp in 5' end/front and 3'end/tail (opt. 3)
 fastp SRR1552444.fastq \
 -o SRR1552444_trimmed.fastq\
---trim_front1 10 \
---trim_tail1 10 \
+--trim_front1 10 \ # 10 = the number of nucleotide base pair to trim
+--trim_tail1 10 \ # 10 = the number of nucleotide base pair to trim
 SRR1552444_trimmed.html
