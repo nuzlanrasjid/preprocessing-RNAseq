@@ -1,0 +1,6 @@
+# check QC
+fastqc SRR1552444.fastq
+fastqc SRR1552445.fastq
+
+# Another option, running two files once
+fastqc SRR*.fastq
