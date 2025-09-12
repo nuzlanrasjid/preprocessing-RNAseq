@@ -1,2 +1,7 @@
+# download sra files
 prefetch SRR1552444
 prefetch SRR1552445
+
+# convert sra to fastq
+fasterq-dump SRR* --split-files # if paired-end
+fasterq-dump SRR #if single-end
