@@ -1,0 +1,11 @@
+# Getting metadata
+sudo apt-get install sratoolkit
+
+# QC check
+sudo apt-get install fastqc 
+
+# Trimming
+sudo apt-get install fastp 
+
+# Alignment to reference sequence
+sudo apt-get install hisat2
