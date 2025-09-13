@@ -1,0 +1,12 @@
+hisat2_extract_splice_sites.py -v \
+    referenceData/annotations/Mus_musculus_annotation.gtf \ # make sure the PATH
+    > referenceData/hisat2_index/splice_sites.txt
+
+hisat2_extract_exons.py -v \
+    referenceData/annotations/Mus_musculus_annotation.gtf \ # make sure the PATH
+    > referenceData/hisat2_index/exons.txt
+
+hisat2-build referenceData/fasta/Mus_musculus_refseq.fa \
+    --ss referenceData/hisat2_index/splice_sites.txt \ # make sure the PATH
+    --exon referenceData/hisat2_index/exons.txt \ # make sure the PATH
+    referenceData/hisat2_index/GRCm38.hisat2
