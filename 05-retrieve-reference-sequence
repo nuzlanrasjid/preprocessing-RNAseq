@@ -9,3 +9,9 @@ gunzip Mus_musculus.GRCm38.dna_sm.primary_assembly.fa.gz
 
 # change name 
 mv Mus_musculus.GRCm38.dna_sm.primary_assembly.fa Mus_musculus_refseq.fa
+
+# download annotation
+wget http://ftp.ensembl.org/pub/release-80/gtf/mus_musculus/Mus_musculus.GRCm38.80.gtf.gz 
+gunzip Mus_musculus.GRCm38.80.gtf.gz
+mv Mus_musculus.GRCm38.80.gtf Mus_musculus_annotation.gtf
+
