@@ -1,0 +1,11 @@
+# make a directory for reference sequence
+mkdir -p referenceData/fasta
+cd referenceData/fasta
+# download the fasta file
+wget http://ftp.ensembl.org/pub/release-80/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna_sm.primary_assembly.fa.gz 
+
+# extract the reference sequence
+gunzip Mus_musculus.GRCm38.dna_sm.primary_assembly.fa.gz 
+
+# change name 
+mv Mus_musculus.GRCm38.dna_sm.primary_assembly.fa Mus_musculus_refseq.fa
