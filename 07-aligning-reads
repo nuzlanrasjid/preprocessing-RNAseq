@@ -1,0 +1,19 @@
+# compressed the trimmed fastq files
+gzip -c SRR1552444_trimmed.fastq > SRR1552444_trimmed.fastq.gz
+gzip -c SRR1552445_trimmed.fastq > SRR1552445_trimmed.fastq.gz
+
+# aligning the reades
+hisat2Ref=refseq/index/Mus_musculus_index.hisat2
+hisat2 -x ${hisat2Ref} \
+       -U fastq/SRR1552444_trimmed.fastq.gz |
+       samtools view -bh - |
+       samtools sort - > bam/SRR1552444.bam
+samtools index SRR1552444.bam
+
+
+hisat2Ref=refseq/index/Mus_musculus_index.hisat2
+hisat2 -x ${hisat2Ref} \
+       -U fastq/SRR1552445_trimmed.fastq.gz |
+       samtools view -bh - |
+       samtools sort - > bam/SRR1552445.bam
+samtools index SRR1552445.bam
